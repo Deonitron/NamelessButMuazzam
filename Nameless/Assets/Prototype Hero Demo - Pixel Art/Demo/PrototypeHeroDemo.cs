@@ -41,7 +41,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
         {
-            Debug.Log("sa");
+            
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
         }

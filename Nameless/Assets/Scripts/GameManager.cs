@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+   
     float x1;
     Vector3 Vector31;
     void Start()
