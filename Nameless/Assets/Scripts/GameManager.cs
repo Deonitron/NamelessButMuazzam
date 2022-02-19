@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     void Start()
     {
-        31
+        print("sea caným");
     }
 
     void Update()
