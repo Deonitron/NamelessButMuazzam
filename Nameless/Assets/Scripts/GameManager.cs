@@ -14,11 +14,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Vector31 = new Vector3(x1, Camera.main.transform.position.y, Camera.main.transform.position.y);
+        
         Vector31 = new Vector3(x1, Camera.main.transform.position.y, Camera.main.transform.position.z);
-=========
-        Vector31 = new Vector3(x1, Camera.main.transform.position.y,-5);
->>>>>>>>> Temporary merge branch 2
 
         Camera.main.transform.position = Vector31;
 
