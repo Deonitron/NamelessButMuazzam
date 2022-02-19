@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
       
-            v3d = new Vector3(GameObject.Find("spirit").transform.position.x, -1.07f, -6.5f);
+            v3d = new Vector3(GameObject.Find("PlaceHolder").transform.position.x, -1.07f, -6.5f);
 
             Camera.main.transform.position = v3d;
             

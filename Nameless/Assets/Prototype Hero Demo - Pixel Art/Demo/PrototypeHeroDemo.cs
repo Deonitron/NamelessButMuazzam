@@ -25,6 +25,7 @@ public class PrototypeHeroDemo : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+         
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_audioSource = GetComponent<AudioSource>();
