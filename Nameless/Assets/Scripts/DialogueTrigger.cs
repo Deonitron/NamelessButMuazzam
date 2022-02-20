@@ -15,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (startedDialogue && Input.GetKeyDown(KeyCode.O))
+        if (startedDialogue && Input.GetKeyDown(KeyCode.F))
         {
             FindObjectOfType<DialogueMenager>().DisplayNextSentence();
         }

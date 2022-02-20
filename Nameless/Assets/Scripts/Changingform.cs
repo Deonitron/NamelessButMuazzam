@@ -22,7 +22,7 @@ public class Changingform : MonoBehaviour
 
     void Update()
     {
-        if(entered)
+        if(entered && Input.GetKeyDown(KeyCode.Q))
         {
             Outer();
         }
@@ -71,10 +71,10 @@ public class Changingform : MonoBehaviour
     }
 
 
-    void Outer()
+    public void Outer()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
+        
+        
             GetComponentInParent<Rigidbody2D>().mass = 50;
 
             GetComponentInParent<PrototypeHeroDemo>().enabled = false;
@@ -91,7 +91,7 @@ public class Changingform : MonoBehaviour
 
            
 
-        }
+        
 
     }
 
