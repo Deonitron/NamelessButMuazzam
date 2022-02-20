@@ -6,11 +6,16 @@ public class Changingform : MonoBehaviour
 {
     GameObject spirit;
     bool entered = false;
+    public bool isFirst;
+
     void Start()
     {
         
         spirit = GameObject.FindGameObjectWithTag("Spirit");
+        
+
         StartCoroutine(Disabler());
+       
 
     }
 
@@ -30,6 +35,7 @@ public class Changingform : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && collision.transform.CompareTag("spiritHolder"))
         {
+            
             GetComponentInParent<Rigidbody2D>().mass = 1;
 
             collision.transform.SetParent(transform);
@@ -42,14 +48,26 @@ public class Changingform : MonoBehaviour
 
 
         }
+        
     }
 
     IEnumerator Disabler()
     {
         yield return new WaitForSeconds(0.01f);
 
+        if(!isFirst)
+        {
+            GetComponentInParent<PrototypeHeroDemo>().enabled = false;
 
-        GetComponentInParent<PrototypeHeroDemo>().enabled = false;
+        }
+        else 
+        
+        {
+            
+            spirit.gameObject.SetActive(false);
+            GetComponentInParent<Rigidbody2D>().mass = 1;
+            
+        }
     }
 
 
