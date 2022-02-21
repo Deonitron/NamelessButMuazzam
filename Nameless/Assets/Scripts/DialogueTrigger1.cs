@@ -1,0 +1,61 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class DialogueTrigger1 : MonoBehaviour
+{
+
+
+
+
+    public Dialogue dialogue;
+    bool startedDialogue= false;
+
+
+
+    private void Update()
+    {
+        if (startedDialogue && Input.GetKeyDown(KeyCode.F))
+        {
+            FindObjectOfType<DialogueMenager>().DisplayNextSentence();
+
+            StartCoroutine(finish());
+        }
+    }
+
+
+
+    public void TriggerDialogue()
+    {
+        FindObjectOfType<DialogueMenager>().StartDialogue(dialogue);
+        startedDialogue = true;
+    }
+
+
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+
+        if(collision.CompareTag("spiritHolder")&& !startedDialogue)
+        {
+            TriggerDialogue();
+        }
+
+
+
+    }
+
+    IEnumerator finish()
+    {
+        yield return new WaitForSeconds(20);
+
+        SceneManager.LoadScene(0);
+
+    }
+
+ 
+}

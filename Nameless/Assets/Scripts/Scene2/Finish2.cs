@@ -13,4 +13,9 @@ public class Finish2 : MonoBehaviour
             SceneManager.LoadScene(sceneId);
         }
     }
+
+    public void Startbutton()
+    {
+        SceneManager.LoadScene(sceneId);
+    }
 }
