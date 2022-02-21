@@ -40,6 +40,7 @@ public class DialogueTrigger : MonoBehaviour
         if(collision.CompareTag("spiritHolder")&& !startedDialogue)
         {
             TriggerDialogue();
+            Debug.Log("sf");
         }
 
 

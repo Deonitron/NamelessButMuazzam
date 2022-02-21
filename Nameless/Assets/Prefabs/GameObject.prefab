@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 356338573}
   - component: {fileID: 356338575}
   - component: {fileID: 356338574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spirit connection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,9 +45,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043548107, y: 0.073863566}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6076335
+  m_Radius: 0.8690231
 --- !u!114 &356338574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9d7de3c947d614c93a961696acbe86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFirst: 0
 --- !u!1 &1536103843178523960
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 1536103843178523956}
   - component: {fileID: 1536103843178523955}
   - component: {fileID: 1536103843178523954}
+  - component: {fileID: 255408814}
   m_Layer: 3
   m_Name: GameObject
   m_TagString: Player
@@ -90,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 1536103843178523960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0}
   m_Children:
   - {fileID: 1536103843907337741}
   - {fileID: 356338573}
@@ -128,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60f39d280f172e44ab73cb24a06b940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxSpeed: 4.5
-  m_jumpForce: 7.5
+  m_maxSpeed: 2.2
+  m_jumpForce: 4.2
   m_hideSword: 0
   m_RunStopDust: {fileID: 7310271610845027193, guid: 39afca3c109b26049a80bc07593eb271, type: 3}
   m_JumpDust: {fileID: 8935918012585647707, guid: 4a4123fbc8b39d441868897a71d2b2b1, type: 3}
@@ -153,7 +155,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 426b954c42bc3d94e9a04652e8a72163, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,6 +224,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03383273, y: 0.7888223}
   m_Size: {x: 0.6741744, y: 1.4424353}
   m_Direction: 0
+--- !u!114 &255408814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536103843178523960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01ac44b29b3f62247be920f3cb56dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0
 --- !u!1 &1536103843907337742
 GameObject:
   m_ObjectHideFlags: 0

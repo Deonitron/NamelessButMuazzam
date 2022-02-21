@@ -9,6 +9,7 @@ TagManager:
   - spiritHolder
   - New tag
   - DeathArea
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - follower
   - Sin
   - holderLayer
-  - 
-  - 
+  - CheckPoint
+  - DeathCollider
   - 
   - 
   - 
