@@ -5,7 +5,7 @@ using UnityEngine;
 public class Changingform : MonoBehaviour
 {
     GameObject spirit;
-    bool entered = false;
+    public bool entered = false;
     public bool isFirst;
 
     void Start()
@@ -33,7 +33,7 @@ public class Changingform : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E) && collision.transform.CompareTag("spiritHolder"))
+        if (Input.GetKey(KeyCode.E) && collision.transform.CompareTag("spiritHolder"))
         {
             
             GetComponentInParent<Rigidbody2D>().mass = 1;
@@ -43,6 +43,8 @@ public class Changingform : MonoBehaviour
             spirit.gameObject.SetActive(false);
 
             GetComponentInParent<PrototypeHeroDemo>().enabled = true;
+            GetComponentInParent<Animator>().enabled = true;
+
             entered = true;
 
 
@@ -78,6 +80,7 @@ public class Changingform : MonoBehaviour
             GetComponentInParent<Rigidbody2D>().mass = 50;
 
             GetComponentInParent<PrototypeHeroDemo>().enabled = false;
+            GetComponentInParent<Animator>().enabled = false;
 
             spirit.transform.position = transform.position;
 

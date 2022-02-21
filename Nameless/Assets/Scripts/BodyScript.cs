@@ -6,16 +6,6 @@ public class BodyScript : MonoBehaviour
 {
    public bool life= false;
    
-    
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-    }
 
     public void Death()
     {
